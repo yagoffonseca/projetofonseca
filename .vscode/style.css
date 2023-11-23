@@ -7,7 +7,8 @@ body{
   */
   /*background imagem color repeat posiiton/size*/
 
-  background: var(--imgbackground-rot) no-repeat center top/cover;
+  background: var(--bg-url) no-repeat center top/cover;
+  height: 100vh;
 }
 
 *{
@@ -37,6 +38,7 @@ body{
   --imgmon-sun-rot:url(./assets/sun.svg);
   --colorspan-rot:rgba(0, 0, 0, 0.2);
 }
+
 body * {
   font-family: 'Inter', sans-serif;
 font-family: 'Open Sans', sans-serif;
@@ -154,7 +156,8 @@ footer{
 }
 
  /*media queries */
- @media(min-width:700px) {
+ 
+  @media (min-width:700px) {
    :root {
       --bg-url: url(./assets/bg-desktop.jpg);
    }
@@ -162,4 +165,4 @@ footer{
    .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
    }
- }
+ } 
