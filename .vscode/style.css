@@ -8,6 +8,7 @@ body{
   /*background imagem color repeat posiiton/size*/
 
   background: var(--bg-url) no-repeat center top/cover;
+
   height: 100vh;
 }
 
@@ -22,10 +23,11 @@ body{
   --colorwhite-rot: white;
   --colorborder-rot: rgba(255, 255, 255, 0.5);
   --colorbackground-rot:rgba( 255, 255, 255, 0.3);
-  --colorbackgroundhover-rot:  rgba(255, 255, 255, 0.1);
+  --colorbkhover-rot:  rgba(255, 255, 255, 0.1);
   --colorsocialhover-rot:rgba(255, 255, 255, 0.5);
   --imgmon-sun-rot:url(./assets/moon-stars.svg);
   --colorspan-rot:rgba(255, 255, 255, 0.5);
+  --colorbuton-rot: white;
 }
 
 .light{
@@ -33,10 +35,11 @@ body{
   --colorwhite-rot: black;
   --colorborder-rot: rgba(0, 0, 0, 0.5);
   --colorbackground-rot:rgba( 0, 0, 0, 0.1);
-  --colorbackgroundhover-rot:  rgba(0, 0, 0, 0.3);
-  --colorsocialhover-rot:rgba(0, 0, 0, 0.1);
+  --colorbkhover-rot:  rgba(0, 0, 0, 0.3);
+  --colorsocialhover-rot:rgba(0, 0, 0, 0.2);
   --imgmon-sun-rot:url(./assets/sun.svg);
   --colorspan-rot:rgba(0, 0, 0, 0.2);
+  --colorbuton-rot: white;
 }
 
 body * {
@@ -76,7 +79,7 @@ button{
   width: 32px;
   height: 32px;
   
-  background: var(--imgmon-sun-rot) no-repeat center white;
+  background: var(--imgmon-sun-rot) no-repeat center var(--colorbuton-rot);
 
   border: 0;
   border-radius: 50%;
@@ -85,6 +88,8 @@ button{
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
+
+  animation: slide-back 0.2s;
 }
 
 span{
@@ -98,9 +103,14 @@ span{
 
 }
 
+#switch button:hover{
+  outline: 8px solid var(--colorsocialhover-rot);
+}
+
+
+
 .light #switch button{
-  left: initial;
-  right: 0px;
+ animation: slide-in 0.2s forwards;
 }
 
 ul {
@@ -126,7 +136,7 @@ ul li a{
 }
 
 ul li a:hover{
-  background: var(--colorbackgroundhover-rot);
+  background: var(--colorbkhover-rot);
   border: 1.5px solid var(--colorwhite-rot);
 }
 
@@ -156,14 +166,31 @@ footer{
 }
 
  /*media queries */
- 
-  @media (min-width:700px){
-
+  
+  @media (min-width: 700px) {
     :root{
       --bg-url: url(./assets/bg-desktop.jpg);
     }
 
-    .light {
+    .light{
       --bg-url: url(./assets/bg-desktop-light.jpg);
     }
+ }
+
+ @keyframes slide-in {
+  from {
+    left:0;
   }
+  to{
+    left:50%;
+  }
+ }
+
+ @keyframes slide-back {
+  from{
+    left:50%;
+  }
+  to{
+    left:0;
+  }
+}
