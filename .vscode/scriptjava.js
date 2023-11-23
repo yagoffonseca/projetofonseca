@@ -1,4 +1,4 @@
-function toggleMode(){
+  function toggleMode(){
 const html = document.documentElement
 html.classList.toggle("light")
 
@@ -13,4 +13,4 @@ html.classList.toggle("light")
     img.setAttribute("src", "./assets/avatar.png")
    }
    
-}
+} 
