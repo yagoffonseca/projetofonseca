@@ -17,7 +17,7 @@ body{
 }
 
 :root{
-  --imgbackground-rot:url(./bg-mobile.jpg);
+  --bg-url :url(./bg-mobile.jpg);
   --colorwhite-rot: white;
   --colorborder-rot: rgba(255, 255, 255, 0.5);
   --colorbackground-rot:rgba( 255, 255, 255, 0.3);
@@ -28,7 +28,7 @@ body{
 }
 
 .light{
-  --imgbackground-rot:url(./assets/bg-mobile-light.jpg);
+  --bg-url :url(./assets/bg-mobile-light.jpg);
   --colorwhite-rot: black;
   --colorborder-rot: rgba(0, 0, 0, 0.5);
   --colorbackground-rot:rgba( 0, 0, 0, 0.1);
@@ -152,3 +152,14 @@ footer{
   padding: 24px;
   justify-content: center;
 }
+
+ /*media queries */
+ @media(min-width:700px) {
+   :root {
+      --bg-url: url(./assets/bg-desktop.jpg);
+   }
+
+   .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+   }
+ }
