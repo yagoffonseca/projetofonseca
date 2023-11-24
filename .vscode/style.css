@@ -35,7 +35,7 @@ body{
   --colorwhite-rot: black;
   --colorborder-rot: rgba(0, 0, 0, 0.5);
   --colorbackground-rot:rgba( 0, 0, 0, 0.1);
-  --colorbkhover-rot:  rgba(0, 0, 0, 0.3);
+  --colorbkhover-rot:  rgba(0, 0, 0, 0.2);
   --colorsocialhover-rot:rgba(0, 0, 0, 0.2);
   --imgmon-sun-rot:url(./assets/sun.svg);
   --colorspan-rot:rgba(0, 0, 0, 0.2);
