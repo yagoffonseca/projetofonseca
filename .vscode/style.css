@@ -100,6 +100,10 @@ button{
   animation: slid-back 1s forwards;
 }
 
+#switch button:hover{
+outline: 8px solid var(--color-socialhover);
+}
+
 ul {
   display: flex;
   flex-direction: column;
